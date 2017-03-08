@@ -592,17 +592,18 @@
         });
 
         function submitAccount() {
+            console.log(refinance);
             let state = document.getElementById("stateSelect");
             let stateValue = state.options[state.selectedIndex].text;
             let url;
             let data = {};
             if (refinance == true) {
-                url: '/Home/submitRefinanceAccount';               
+                url = '/Home/submitRefinanceAccount';               
                 data.MarketValue = document.getElementById('marketValue').value;
                 data.LoanBalance = document.getElementById('loanBalance').value;                    
             }
             else {
-                url: '/Home/submitAcquisitionAccount';
+                url = '/Home/submitAcquisitionAccount';
                 data.PurchasePrice = document.getElementById('purchasePrice').value;
                 data.RequestedLoanAmount = document.getElementById('requestedLoanAmount').value;
             }
@@ -614,7 +615,7 @@
             data.Name = document.getElementById('name').value;
             data.Email = document.getElementById('email').value;
             data.Phone = document.getElementById('phone').value;
-            //console.log(data);
+            console.log(url);
 
             $.ajax({
                 url: url,            
@@ -623,16 +624,12 @@
                 data: data
             }).success(function (response) {
                 console.log('success');
-                //document.getElementById('sharedQuestion3').style.display = 'none';
-                //document.getElementById('thankYouMessage').style.display = 'block';
                 $('#sharedQuestion3').addClass('opacityNone');
                 $('#thankYouMessage').addClass('opacityFull');
                 $('#frontPageText').show();
             }).error(function (response) {
                 console.log('error');
                 console.log(response);
-                //document.getElementById('sharedQuestion3').style.display = 'none';
-                //document.getElementById('thankYouMessage').style.display = 'block';
                 $('#sharedQuestion3').addClass('opacityNone');
                 $('#thankYouMessage').addClass('opacityFull');
                 $('#frontPageText').show();
