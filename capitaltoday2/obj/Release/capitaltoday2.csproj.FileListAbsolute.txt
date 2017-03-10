@@ -239,3 +239,7 @@ C:\Users\olga\Documents\github\capitaltoday2\capitaltoday2\bin\zh-Hant\System.Sp
 C:\Users\olga\Documents\github\capitaltoday2\capitaltoday2\obj\Release\capitaltoday2.csprojResolveAssemblyReference.cache
 C:\Users\olga\Documents\github\capitaltoday2\capitaltoday2\obj\Release\capitaltoday2.dll
 C:\Users\olga\Documents\github\capitaltoday2\capitaltoday2\obj\Release\capitaltoday2.pdb
+C:\Users\olga\Documents\github\capitaltoday2\capitaltoday2\bin\SendGrid.CSharp.HTTP.Client.dll
+C:\Users\olga\Documents\github\capitaltoday2\capitaltoday2\bin\SendGrid.dll
+C:\Users\olga\Documents\github\capitaltoday2\capitaltoday2\bin\System.Net.Http.Formatting.dll
+C:\Users\olga\Documents\github\capitaltoday2\capitaltoday2\bin\System.Net.Http.Formatting.xml

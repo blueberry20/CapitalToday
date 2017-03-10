@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Sandbox";
+}
+
+<h2>Sandbox</h2>
+<div id="sandbox">
+    <button id="deleteRefinanceBtn">Delete Refinance Accounts</button>
+
+    <button id="deleteAcquisitionBtn">Delete Acquisition Accounts</button>
+</div>
+@section scripts {
+    <script>
+    $(document).ready(function () {
+        $('#deleteRefinanceBtn').click(function () {
+            $.ajax({
+                url: '/Home/DeleteRefinanceAccounts',
+                type: 'GET'
+            }).success(function (response) {
+                console.log('success');
+            }).error(function (response) {
+                console.log('error');
+                console.log(response);
+            })
+        });
+
+        $('#deleteAcquisitionBtn').click(function () {
+            $.ajax({
+                url: '/Home/DeleteAcquisitionAccounts',
+                type: 'GET'
+            }).success(function (response) {
+                console.log('success');
+            }).error(function (response) {
+                console.log('error');
+                console.log(response);
+            })
+        });
+
+    });
+    </script>
+}

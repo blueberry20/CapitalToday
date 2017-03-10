@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>New loan request</title>
+    <meta charset="utf-8" />
+    <style>
+        body {{
+            font-size: 14px;
+        }}
+
+        div, a {{
+            margin-bottom: 10px;
+        }}
+
+        a {{
+            font-weight: 400;
+            display: block;
+        }}
+
+        #logo {{
+            height: 50px;
+        }}
+    </style>
+</head>
+<body style="font-size:14px;">
+    <div style="background-color: #f0f0f0; padding: 10px;">
+        <div id="logo" style="height:40px">
+            <img id="logoImg" style="height:40px; max-width:234px; margin:0 auto" src="http://capitaltoday220170222012557.azurewebsites.net//Content/images/logo.png" alt="CapitalToday Logo" />
+        </div>
+        <div style="background-color: #fff; padding:20px; font-size:16px; max-width:100% ">
+            <div>Hello!</div>
+            <br>
+            <div>There was a new refinancing request. Please see the details below.</div>
+            <br />
+            <div>Type: Refinance</div>
+            <div>Name: {0}</div>
+            <div>Email: {1}</div>
+            <div>Phone: {2}</div>
+            <div>Property Market Value: ${3}</div>
+            <div>Loan balance: ${4}</div>
+            <div>Property State: {8}</div>
+            <div>Property type: {5}</div>
+            <div>Units number:{6} </div>
+            <div>Other description:{7}</div>
+
+            <br>
+        </div>
+        <br>
+        <div>Regards,</div>
+        <div style="color:#db7903">Capital Today</div>
+        <a href="http://capitaltoday220170222012557.azurewebsites.net">www.capitaltoday.com</a>
+    </div>
+</body>
+</html>
