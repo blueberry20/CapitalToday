@@ -7,15 +7,19 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-     font-family:'Crimson Text', sans-serif;
      font-family: 'Roboto', sans-serif;
      font-weight:400;
 }
 
 h1 {
+    font-family:'Crimson Text', serif;
     font-size:2.8em;
 }
 
+#arrowImage {
+    height:70px;
+    margin-bottom:1em;
+}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -55,8 +59,8 @@ label {
 }
 
 h2 {
-    margin-bottom:1em;
-    font-family:'Roboto';
+    margin-bottom:0.5em;
+    font-family:'Crimson Text', serif;
     text-align:center;
     font-size:2.3em;
 }
@@ -91,6 +95,19 @@ h3 {
     padding: 2em 4em 0;
 }
 
+#mainQuestion {
+     display:block;
+     padding:0;
+     opacity:1;
+     background-color:transparent;
+ }
+
+ #buttonWrapper {
+    border: 3px solid #52aea5;
+    background-color:rgba(255,255,255,0.7);
+    padding:2em;
+ }
+
 #commercialDealsPicture {
     background-repeat:no-repeat;
     background-image: url('images/people_1920_1080.jpg');
@@ -107,7 +124,11 @@ h3 {
 
  .columnNarrow {
     text-align:center;
-    max-width:30%;
+    max-width:20%;
+}
+
+ #arrowHolder {
+    height: 34px;
 }
 
  .questionList {
@@ -134,11 +155,7 @@ h3 {
     animation: fadeInFromNone 0.5s ease-out;
  }
 
- #mainQuestion {
-     display:block;
-     padding:2em;
-     opacity:1;
- }
+
 
  @-webkit-keyframes fadeInFromNone {
     0% {
@@ -209,7 +226,7 @@ h3 {
 }
 
  button {
-     width:200px;
+     width:100%;
      height:50px;
      border:none;
      outline:0;
@@ -234,14 +251,27 @@ h3 {
     background-color: #2fc22f;
 }
 
-.nextBtn {
+.nextBtn, .previousButton, #submitButton {
     width: 100px;
     height: 40px;
     background-color: #31c02e;
 }
 
+#submitButton {
+    width: 100px;
+    height: 40px;
+}
+
 .nextBtn:hover, .nextBtn:focus, .nextBtn:active {
         background-color: #5ac157;
+}
+
+.previousButton{
+    background-color:gray;
+}
+
+.previousButton:hover, .previousButton:focus, .previousButton:active {
+    background-color: #a6a4a4;;
 }
 
 #frontPageText {
