@@ -208,7 +208,7 @@
                             <input type="text" id="phone" class="required sharedQuestion3" name="phone" value="">
                             <p id="phoneError" class="displayError">Please enter a valid phone number</p>
                         </div>
-                        <div class="form-group row termsRow">
+                        @*<div class="form-group row termsRow">
                             <div class="checkboxWrapper">
                                 <div class="checkbox">
                                     <input type="checkbox" id="termsCheckbox" name="termsCheckbox" class="required sharedQuestion3">
@@ -218,7 +218,7 @@
                                 </div>
                                 <p id="termsError" class="displayError">You haven't agreed to terms</p>
                             </div>
-                        </div>
+                        </div>*@
                         <p id="defaultError" class="displayError">Something went wrong</p>
                         <button id="submitButton" class="greenButton">Submit</button>
                     </div>
@@ -276,8 +276,8 @@
                     </div>
 
                     <div id="thankYouMessage" class="displayNone">
-                        <p>Thank you for your submission!</p>
-                        <p>Our representative will be in touch with you shortly. For any urgent matters you can contact our staff directly at 888-555-1212.</p>
+                        <p><strong>Thank you</strong> for your submission!</p>
+                        <p>Our representative will be <strong>in touch</strong> with you <strong>shortly</strong>. For any <strong>urgent</strong> matters you can <strong>contact</strong> our staff directly at <strong>917-580-0477</strong>.</p>
                     </div>
                 </div>
         </div>
@@ -287,50 +287,50 @@
         <div id="loanDescriptionRow" class="row flexDiv">
             <div class="flexColumn">
                 <div class="loanList ">
-                    <p>Bridge Loans</p>
-                    <p>Business Acquisition Loans</p>
-                    <p>CMBS Loans</p>
-                    <p>Commercial Condo Loans</p>
-                    <p>Commercial Co-op Loans</p>
-                    <p>Commercial Equipment Loans</p>
-                    <p>Commercial Lines of Credit</p>
-                    <p>Commercial Warehouse Loans</p>
+                    <p class="veryLarge">Bridge Loans</p>
+                    <p class="slightlyLarge">Business Acquisition Loans</p>
+                    <p class="small">CMBS Loans</p>
+                    <p class="normal">Commercial Condo Loans</p>
+                    <p class="slightlySmaller">Commercial Co-op Loans</p>
+                    <p class="smallest">Commercial Equipment Loans</p>
+                    <p class="smallest"><strong>Commercial Lines of Credit</strong></p>
+                    <p class="small">Commercial Warehouse Loans</p>
                 </div>
             </div>
             <div class="flexColumn">
                 <div class="loanList">
-                    <p>Commercial Working Capital Financing</p>
-                    <p>Condo Construction Loans</p>
-                    <p>Condo Conversion Loans</p>
-                    <p>Condo Inventory Loans</p>
-                    <p>Construction Loan</p>
-                    <p>Debt Restructuring</p>
-                    <p>Development Loans 44</p>
-                    <p>Distressed Commercial Property Loans</p>
+                    <p class="small">Commercial Working Capital Financing</p>
+                    <p class="slightlySmaller">Condo Construction Loans</p>
+                    <p class="small">Condo Conversion Loans</p>
+                    <p class="smallest">Condo Inventory Loans</p>
+                    <p class="veryLarge">Construction Loan</p>
+                    <p class="slightlyLarge"><strong>Debt Restructuring</strong></p>
+                    <p class="smallest">Development Loans 44</p>
+                    <p class="small">Distressed Commercial Property Loans</p>
                 </div>
             </div>
             <div class="flexColumn">
                 <div class="loanList">
-                    <p>Finance Acquisitions</p>
-                    <p>Hard Money Loans</p>
-                    <p>Land Loans</p>
-                    <p>Mixed Use Property Loans</p>
-                    <p>Mortgages</p>
-                    <p>Multi Family Construction Loans</p>
-                    <p>Multi Family Loans</p>
-                    <p>Non Stabilized Commercial Property Loans</p>
+                    <p class="normal"><strong>Finance Acquisitions</strong></p>
+                    <p class="normal"><strong>Hard Money Loans</strong></p>
+                    <p class="slightlyLarge">Land Loans</p>
+                    <p class="normal">Mixed Use Property Loans</p>
+                    <p class="veryLarge">Mortgages</p>
+                    <p class="small">Multi Family Construction Loans</p>
+                    <p class="veryLarge">Multi Family Loans</p>
+                    <p class="smallest">Non Stabilized Commercial Property Loans</p>
                 </div>
             </div>
             <div class="flexColumn">
                 <div class="loanList">
-                    <p>Office Building Loans</p>
-                    <p>owner occupied commercial loans</p>
-                    <p>refinance</p>
-                    <p>retail condo loans</p>
-                    <p>sba 504</p>
-                    <p>sba 7a</p>
-                    <p>sba financing</p>
-                    <p>straight loans</p>
+                    <p class="normal"><strong>Office Building Loans</strong></p>
+                    <p class="small">Owner Occupied Commercial Loans</p>
+                    <p class="veryLarge">Refinance</p>
+                    <p class="small">Retail Condo Loans</p>
+                    <p class="smallest">SBA 504</p>
+                    <p class="smallest">SBA 7a</p>
+                    <p class="small">SBA Financing</p>
+                    <p class="smallest">Straight Loans</p>
                 </div>
             </div>
         </div>
@@ -392,10 +392,13 @@
             </div>
             <div id="addressRow" class="row text-center">
                 <h3>Main Address:</h3>
-                <h4>Avolar Capital</h4>
+                <h4>Capital.Today</h4>
                 <p>600 3rd Ave, 2nd Floor</p>
                 <p>New York, NY 10016</p>
-                <p>888-555-1212</p>
+                <p><strong>Contact Us Now Via Phone:</strong></p>
+                <p>917-580-0477</p>
+                <p><strong>Contact Us Via Email:</strong></p>
+                <p><a href="mailto:inquieries@capitaltoday.com?Subject=Financing%20request" target="_top">Click here</a></p>
             </div>
         </div>
     </section>
@@ -430,10 +433,17 @@
                 refinance = false;
             });
 
-            $('.previousButton').click(function () {
+            $('.previousButton').click(function () {               
                 let currentSlide = $(this).closest('.questionList');
                 $(currentSlide).removeClass('opacityFull').addClass('opacityNone');
-                $(currentSlide).prev().removeClass('opacityNone').addClass('opacityFull');
+                if ($(currentSlide).attr('id') == "acquisitionQuestion1") {
+                    alert('ff');
+                    $('#mainQuestion').removeClass('opacityNone').addClass('opacityFull');
+                }
+                else {
+                    $(currentSlide).prev().removeClass('opacityNone').addClass('opacityFull');
+                }
+                
             })
 
 
@@ -664,16 +674,16 @@
                             valid = true;
                         }
                         break;
-                    case "termsCheckbox":
-                        if (document.getElementById('termsCheckbox').checked == false) {
-                            document.getElementById('termsError').style.display = 'block';
-                            valid = false;
-                        }
-                        else {
-                            document.getElementById('termsError').style.display = 'none';
-                            valid = true;
-                        }
-                        break;
+                    //case "termsCheckbox":
+                    //    if (document.getElementById('termsCheckbox').checked == false) {
+                    //        document.getElementById('termsError').style.display = 'block';
+                    //        valid = false;
+                    //    }
+                    //    else {
+                    //        document.getElementById('termsError').style.display = 'none';
+                    //        valid = true;
+                    //    }
+                    //    break;
                     default:
                         if (value == '' || value == null) {
                             valid = false;

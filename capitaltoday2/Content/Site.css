@@ -29,10 +29,10 @@ h1 {
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
+/*input,
 select {
     max-width: 280px;
-}
+}*/
 
 textarea {
     width: 100%;
@@ -63,6 +63,7 @@ h2 {
     font-family:'Crimson Text', serif;
     text-align:center;
     font-size:2.3em;
+    font-weight:700;
 }
 
 h3 {
@@ -83,8 +84,10 @@ h3 {
     display: -ms-flexbox;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
  #mainSection {
@@ -100,10 +103,12 @@ h3 {
      padding:0;
      opacity:1;
      background-color:transparent;
+     width:90%;
  }
 
  #buttonWrapper {
     border: 3px solid #52aea5;
+    border: 3px solid #11a15e;
     background-color:rgba(255,255,255,0.7);
     padding:2em;
  }
@@ -124,7 +129,7 @@ h3 {
 
  .columnNarrow {
     text-align:center;
-    max-width:20%;
+    max-width:25%;
 }
 
  #arrowHolder {
@@ -134,7 +139,7 @@ h3 {
  .questionList {
     display:none;
     background-color:rgba(255,255,255,0.8);
-    padding:2em;
+    padding: 1em 2em;
     /*opacity:0;
     webkit-transition: opacity 1s linear 1s;
     transition: opacity 1s linear 1s;
@@ -155,75 +160,6 @@ h3 {
     animation: fadeInFromNone 0.5s ease-out;
  }
 
-
-
- @-webkit-keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
-}
 
  button {
      width:100%;
@@ -278,7 +214,7 @@ h3 {
     background-color:rgba(255,255,255,0.7);
     width: 80%;
     padding: 1em;
-    margin-top:20%;
+    margin-top:10%;
 }
 
 #logoImage {
@@ -295,10 +231,11 @@ h3 {
 }
 
 input[type="text"], input[type="number"], input[type="email"], select {
-    max-width: 280px;
+    /*max-width: 280px;*/
     height: 40px;
     width: 100%;
     margin-bottom:1em;
+    min-width:240px;
 }
 
 input[type="text"], input[type="number"], input[type="email"], textarea, select {
@@ -334,12 +271,16 @@ p.displayError {
 
 .loanList {
     background-color: #adeef5;
+    background-color: #273f74;
     margin: 1em 1em 1em 0;
     padding: 1em;
+    color:#fff;
 }
 
 #commercialDeals .flexColumn {
     width:25%;
+    background-color: #273f74;
+    border: 1px solid #fff;
     /*-webkit-box-flex: 1;
     -moz-box-flex: 1;
     -webkit-flex: 1;
@@ -476,6 +417,93 @@ p:last-child {
         background-color: #3bc295;
 }
 
+.loanList p {
+    font-family: 'Kreon', serif;
+}
+.veryLarge {
+    font-size:2.5em;
+}
+.slightlyLarge {
+    font-size:2em;
+}
+.normal {
+    font-size:1.5em;
+}
+.small {
+    font-size: 1em;
+}
+.smallest {
+    font-size:0.9em;
+}
+
+ @-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
 
 @media only screen and (max-width:1300px){
     h1 {
@@ -486,6 +514,12 @@ p:last-child {
     }
     h3 {
         font-size:1em;
+    }
+    .columnNarrow {
+        max-width:30%;
+    }
+    #mainQuestion {
+        width:100%;
     }
     #dashboardContainer h3 {
         font-size:1.5em;
@@ -523,13 +557,13 @@ p:last-child {
     h1 {
         font-size: 2em;
     }
-    h2 {
+    /*h2 {
         font-size:1.5em;
-    }
+    }*/
 
-    button {
+    /*button {
         width:150px;
-    }
+    }*/
 
     #frontPageText {
         width:90%;
@@ -553,9 +587,16 @@ p:last-child {
     .columnWide, .columnNarrow {
         width:100%;
     }
+    h2 {
+        font-size:3em;
+    }
 
     button {
         width:200px;
+    }
+    #buttonWrapper, .questionList {
+        width:50%;
+        margin:0 auto;
     }
     #logoImage {
         width: 300px;
@@ -597,7 +638,8 @@ p:last-child {
         margin:0 auto;
     }
     #thankYouMessage {
-        max-width:100%;
+        max-width: 50%;
+        margin: 0 auto;
     }
 
     .form-group {
@@ -607,7 +649,13 @@ p:last-child {
 }
 
 @media only screen and (max-width: 420px) {
-
+    #buttonWrapper, .questionList {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #buttonWrapper {
+        padding:1em;
+    }
     #logoImage {
         width: 200px;
         margin-left: 1em;
@@ -620,15 +668,26 @@ p:last-child {
         width: 100%;
         margin-top: 0;
     }
+    #arrowImage {
+        height: 60px;
+    }
+
+    .columnNarrow {
+        margin:0;
+    }
     .questionList .row {
         padding: 0.5em 0 0 0;
     }
     h1 {
         font-size:1.3em;
-        margin:0;
+        margin: 0 0 5px;
     }
-    h1:first-child {
+    /*h1:first-child {
         margin-bottom:0.5em;
+    }*/
+    h2 {
+        font-size:1.8em;
+        margin-bottom:0;
     }
     input[type="text"], input[type="number"], input[type="email"], select {
         max-width: 100%;
@@ -638,11 +697,13 @@ p:last-child {
     }
     .questionList {
         padding: 1em 2em;
+        margin-top:10%;
     }
 
     #commercialDeals .flexColumn {
         width: 100%;
         text-align: center;
+        border:none;
     }
     #commercialDeals .flexColumn:nth-child(odd) {
         padding: 0 1px 2px;
@@ -671,7 +732,7 @@ p:last-child {
         font-size:1.3em;
     }
     #mainQuestion {
-        padding: 1em;
+        padding:0 1em;
     }
     section>h2 {
         margin:1em 0.5em;
