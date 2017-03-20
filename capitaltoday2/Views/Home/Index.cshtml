@@ -182,6 +182,7 @@
                             <p id="stateError" class="displayError">Please select the state</p>
                         </div>
                         <div class="navigationButtons">
+                            <button class="previousButton">Back</button>
                             <button id="Btn2" class="nextBtn">Next</button>
                         </div>
                     </div>
@@ -190,7 +191,12 @@
                         <div class="form-group row">
                             <p>First name:</p>
                             <input type="text" id="name" class="required sharedQuestion3" name="name" value="">
-                            <p id="nameError" class="displayError">Please enter your valid first name</p>
+                            <p id="nameError" class="displayError">Please enter a valid first name</p>
+                        </div>
+                        <div class="form-group row">
+                            <p>Last name:</p>
+                            <input type="text" id="lastName" class="required sharedQuestion3" name="lastName" value="">
+                            <p id="lastNameError" class="displayError">Please enter a valid last name</p>
                         </div>
                         <div class="form-group row">
                             <p>Email:</p>
@@ -223,15 +229,48 @@
                     <div id="acquisitionQuestion1" class="questionList">
                         <div class="form-group row">
                             <p>What is the <strong>Purchase Price</strong>?</p>
+                            <select class="form-control acquisitionQuestion1" id="purchasePrice" name="purchasePrice">
+                                <option disabled selected value="">Select value</option>
+                                <option value="lessThan$15,000">Less than $15,000</option>
+                                <option value="$15,000-$49,999">$15,000-$49,999</option>
+                                <option value="$50,000-$99,999">$50,000-$99,999</option>
+                                <option value="$100,000-$249,999">$100,000-$249,999</option>
+                                <option value="$250,000-$499,999">$250,000-$499,999</option>
+                                <option value="$500,000-$999,999">$500,000-$999,999</option>
+                                <option value="$1,000,000-$1,999,999">$1,000,000-$1,999,999</option>
+                                <option value="$2,000,000-$4,999,999">$2,000,000-$4,999,999</option>
+                                <option value="$5,000,000AndHigher">$5,000,000 and higher</option>
+                            </select>
+                            <p id="purchasePriceError" class="displayError">Please select purchase price</p>
+                        </div>
+                        @*<div class="form-group row">
+                            <p>What is the <strong>Purchase Price</strong>?</p>
                             <input type="text" min="0" id="purchasePrice" name="purchasePrice" class="acquisitionQuestion1 required" />
                             <p id="purchasePriceError" class="displayError">Please enter purchase price</p>
-                        </div>
+                        </div>*@
                         <div class="form-group row">
+                            <p>What is the <strong>Requested Loan Amount</strong>?</p>
+                            <select class="form-control acquisitionQuestion1" id="requestedLoanAmount" name="requestedLoanAmount">
+                                <option disabled selected value="">Select value</option>
+                                <option value="lessThan$15,000">Less than $15,000</option>
+                                <option value="$15,000-$49,999">$15,000-$49,999</option>
+                                <option value="$50,000-$99,999">$50,000-$99,999</option>
+                                <option value="$100,000-$249,999">$100,000-$249,999</option>
+                                <option value="$250,000-$499,999">$250,000-$499,999</option>
+                                <option value="$500,000-$999,999">$500,000-$999,999</option>
+                                <option value="$1,000,000-$1,999,999">$1,000,000-$1,999,999</option>
+                                <option value="$2,000,000-$4,999,999">$2,000,000-$4,999,999</option>
+                                <option value="$5,000,000AndHigher">$5,000,000 and higher</option>
+                            </select>
+                            <p id="requestedLoanError" class="displayError">Please select requested loan amount</p>
+                        </div>
+                        @*<div class="form-group row">
                             <p>What is the <strong>Requested Loan Amount</strong>?</p>
                             <input type="text" min="0" id="requestedLoanAmount" name="requestedLoanAmount" class="acquisitionQuestion1 required" />
                             <p id="requestedLoanError" class="displayError">Please enter requested loan amount</p>
-                        </div>
+                        </div>*@
                         <div class="navigationButtons">
+                            <button class="previousButton">Back</button>
                             <button id="acquisitionBtn1" class="nextBtn">Next</button>
                         </div>
                     </div>
@@ -419,7 +458,7 @@
                 switch (name) {
                     case "marketValue":
 
-                        if (value != null && value != undefined) {
+                        if (value != null && value != 'undefined') {
                             document.getElementById('marketValueError').style.display = 'none';
                             valid = true;
                            // console.log('mv' + valid);
@@ -431,7 +470,7 @@
                         break;
                     case "loanBalance":
 
-                        if (value != null && value != undefined) {
+                        if (value != null && value != 'undefined') {
                             document.getElementById('loanBalanceError').style.display = 'none';
                             valid = true;
                             console.log('lb' + valid);
@@ -461,7 +500,7 @@
                 let value = $(element).val();
                 switch (name) {
                     case "purchasePrice":
-                        if (isNumber(value) === true) {
+                        if (value != null && value != 'undefined') {
                             document.getElementById('purchasePriceError').style.display = 'none';
                             valid = true;
                         }
@@ -472,7 +511,7 @@
                         break;
                     case "requestedLoanAmount":
 
-                        if (isNumber(value) === true) {
+                        if (value != null && value != 'undefined') {
                             document.getElementById('requestedLoanError').style.display = 'none';
                             valid = true;
                         }
@@ -595,6 +634,16 @@
                             valid = true;
                         }
                         break;
+                    case "lastName":
+                        if (value.length < 2 || value == null) {
+                            document.getElementById('lastNameError').style.display = 'block';
+                            valid = false;
+                        }
+                        else {
+                            document.getElementById('lastNameError').style.display = 'none';
+                            valid = true;
+                        }
+                        break;
                     case "email":
                         if (!validateEmail(value)) {
                             document.getElementById('emailError').style.display = 'block';
@@ -660,6 +709,7 @@
             data.OtherDescription = document.getElementById('otherDescription').value || "";
             data.PropertyState = stateValue;
             data.Name = document.getElementById('name').value;
+            data.LastName = document.getElementById('lastName').value;
             data.Email = document.getElementById('email').value;
             data.Phone = document.getElementById('phone').value;
             console.log(url);
