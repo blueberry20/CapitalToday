@@ -270,8 +270,8 @@ p.displayError {
 }
 
 .loanList {
-    background-color: #adeef5;
-    background-color: #273f74;
+    /*background-color: #adeef5;
+    background-color: #273f74;*/
     margin: 1em 1em 1em 0;
     padding: 1em;
     color:#fff;
@@ -303,10 +303,12 @@ section>h2 {
 
 #blueDivs .snippet {
     background-color: #128ab9;
+    background-color: #273f74;
 }
 
 #blueDivs .verticalSeparator {
     background-color: #128ab9;
+    background-color: #273f74;
 }
 
 .snippet {
@@ -371,6 +373,7 @@ hr {
 footer {
     text-align: center;
     background-color: #adeef5;
+    background-color: #e99a56;
     padding: 1em;
     margin-top: 2em;
 }
@@ -427,10 +430,13 @@ p:last-child {
     font-size:2em;
 }
 .normal {
-    font-size:1.5em;
+    font-size:1.6em;
+}
+.slightlySmaller {
+    font-size: 1.4em;
 }
 .small {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 .smallest {
     font-size:0.9em;
@@ -595,7 +601,7 @@ p:last-child {
         width:200px;
     }
     #buttonWrapper, .questionList {
-        width:50%;
+        width:55%;
         margin:0 auto;
     }
     #logoImage {
@@ -629,7 +635,6 @@ p:last-child {
     #frontPageText {
         margin-top: 1em;
         width: 100%;
-        margin-top: 20%;
     }
     #mainQuestion {
         background-color: transparent;
@@ -673,10 +678,10 @@ p:last-child {
     }
 
     .columnNarrow {
-        margin:0;
+        margin:1em 1em 0;
     }
     .questionList .row {
-        padding: 0.5em 0 0 0;
+        padding: 0;
     }
     h1 {
         font-size:1.3em;
@@ -696,8 +701,8 @@ p:last-child {
         max-width:100%;
     }
     .questionList {
-        padding: 1em 2em;
-        margin-top:10%;
+        padding: 1em;
+        margin-top:5%;
     }
 
     #commercialDeals .flexColumn {
@@ -730,6 +735,8 @@ p:last-child {
     }
     #thankYouMessage {
         font-size:1.3em;
+        max-width:100%;
+        padding:1em;
     }
     #mainQuestion {
         padding:0 1em;

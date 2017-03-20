@@ -220,7 +220,11 @@
                             </div>
                         </div>*@
                         <p id="defaultError" class="displayError">Something went wrong</p>
-                        <button id="submitButton" class="greenButton">Submit</button>
+                        <div class="navigationButtons">
+                            <button class="previousButton">Back</button>
+                            <button id="submitButton" class="greenButton">Submit</button>
+                        </div>
+                        
                     </div>
 
 
@@ -329,7 +333,7 @@
                     <p class="small">Retail Condo Loans</p>
                     <p class="smallest">SBA 504</p>
                     <p class="smallest">SBA 7a</p>
-                    <p class="small">SBA Financing</p>
+                    <p class="slightlySmaller">SBA Financing</p>
                     <p class="smallest">Straight Loans</p>
                 </div>
             </div>
@@ -437,7 +441,6 @@
                 let currentSlide = $(this).closest('.questionList');
                 $(currentSlide).removeClass('opacityFull').addClass('opacityNone');
                 if ($(currentSlide).attr('id') == "acquisitionQuestion1") {
-                    alert('ff');
                     $('#mainQuestion').removeClass('opacityNone').addClass('opacityFull');
                 }
                 else {
