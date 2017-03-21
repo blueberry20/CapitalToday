@@ -381,7 +381,7 @@ hr {
 footer {
     text-align: center;
     background-color: #adeef5;
-    background-color: #e99a56;
+    background-color: #e7ae74;;
     padding: 1em;
     margin-top: 2em;
 }
@@ -425,7 +425,8 @@ p:last-child {
 }
 
 #sandbox button{
-        background-color: #3bc295;
+    background-color: #3bc295;
+    width:200px;
 }
 
 .loanList p {

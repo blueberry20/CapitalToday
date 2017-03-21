@@ -33,9 +33,9 @@ namespace capitaltoday2.Controllers
                 //send email to mortgage broker
                 string emailTemplate2 = EmailTemplateHelper.GetTemplate("RefinanceReferral");
                 string emailBody2 = string.Format(emailTemplate2, pRefinance.Name, pRefinance.LastName, pRefinance.Email, pRefinance.Phone, pRefinance.MarketValue, pRefinance.LoanBalance, pRefinance.PropertyType, pRefinance.UnitNumber, pRefinance.OtherDescription, pRefinance.PropertyState);
-                EmailHelper.SendEmail("olgasales@gmail.com ", "no-reply@CapitalToday.com", "New refinance request", emailBody2, true);
-                //EmailHelper.SendEmail("mike.mesheriakov@gmail.com ", "no-reply@CapitalToday.com", "New refinance request", emailBody2, true);
-                //EmailHelper.SendEmail("lrammairone@careercocorp.com", "no-reply@CapitalToday.com", "New refinance request", emailBody2, true);
+                //EmailHelper.SendEmail("olgasales@gmail.com ", "no-reply@CapitalToday.com", "New refinance request", emailBody2, true);
+                EmailHelper.SendEmail("mike.mesheriakov@gmail.com ", "no-reply@CapitalToday.com", "New refinance request", emailBody2, true);
+                EmailHelper.SendEmail("lrammairone@careercocorp.com", "no-reply@CapitalToday.com", "New refinance request", emailBody2, true);
                 return Content(JsonConvert.SerializeObject(new { }), "application/json");
             }
             catch (Exception ex)
@@ -58,9 +58,9 @@ namespace capitaltoday2.Controllers
                 //send email to mortgage broker
                 string emailTemplate2 = EmailTemplateHelper.GetTemplate("AcquisitionReferral");
                 string emailBody2 = string.Format(emailTemplate2, pAcquisition.Name, pAcquisition.LastName, pAcquisition.Email, pAcquisition.Phone, pAcquisition.PurchasePrice, pAcquisition.RequestedLoanAmount, pAcquisition.PropertyType, pAcquisition.UnitNumber, pAcquisition.OtherDescription, pAcquisition.PropertyState);
-                EmailHelper.SendEmail("olgasales@gmail.com ", "no-reply@CapitalToday.com", "New loan request", emailBody2, true);
-                //EmailHelper.SendEmail("mike.mesheriakov@gmail.com ", "no-reply@CapitalToday.com", "New loan request", emailBody2, true);
-                //EmailHelper.SendEmail("lrammairone@careercocorp.com", "no-reply@CapitalToday.com", "New loan request", emailBody2, true);
+                //EmailHelper.SendEmail("olgasales@gmail.com ", "no-reply@CapitalToday.com", "New loan request", emailBody2, true);
+                EmailHelper.SendEmail("mike.mesheriakov@gmail.com ", "no-reply@CapitalToday.com", "New loan request", emailBody2, true);
+                EmailHelper.SendEmail("lrammairone@careercocorp.com", "no-reply@CapitalToday.com", "New loan request", emailBody2, true);
                 return Content(JsonConvert.SerializeObject(new { }), "application/json");
             }
             catch (Exception ex)
