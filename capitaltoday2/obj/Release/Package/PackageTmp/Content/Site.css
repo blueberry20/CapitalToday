@@ -107,9 +107,9 @@ h3 {
  }
 
  #buttonWrapper {
-    border: 3px solid #52aea5;
-    border: 3px solid #11a15e;
-    background-color:rgba(255,255,255,0.7);
+    /*border: 3px solid #52aea5;
+    border: 3px solid #11a15e;*/
+    background-color:rgba(255,255,255,0.8);
     padding:2em;
  }
 
@@ -211,7 +211,7 @@ h3 {
 }
 
 #frontPageText {
-    background-color:rgba(255,255,255,0.7);
+    background-color:rgba(255,255,255,0.8);
     width: 80%;
     padding: 1em;
     margin-top:10%;
@@ -294,6 +294,14 @@ p.displayError {
 
 section>h2 {
     margin:1em 1em 0.5em;
+    color: #273f74;
+    font-size: 3em;
+}
+.orange {
+    color: #cf6b04;
+}
+.green{
+    color: #038703;
 }
 
 .verticalSeparator {
@@ -680,9 +688,14 @@ p:last-child {
     .columnNarrow {
         margin:1em 1em 0;
     }
+
     .questionList .row {
-        padding: 0;
+        padding: 1em 0 0 0;
     }
+    .navigationButtons {
+        margin-top:1em;
+    }
+
     h1 {
         font-size:1.3em;
         margin: 0 0 5px;
@@ -691,7 +704,7 @@ p:last-child {
         margin-bottom:0.5em;
     }*/
     h2 {
-        font-size:1.8em;
+        font-size:2em;
         margin-bottom:0;
     }
     input[type="text"], input[type="number"], input[type="email"], select {
@@ -743,7 +756,7 @@ p:last-child {
     }
     section>h2 {
         margin:1em 0.5em;
-        font-size:1.3em;
+        font-size:2em;
     }
     button {
         margin:0.5em;
